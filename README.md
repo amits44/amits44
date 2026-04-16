@@ -114,10 +114,6 @@ Intelligent coding assistant for LeetCode problem-solving.
 
 ---
 
-## 📊 GitHub Stats
-
-![Amit's GitHub Stats](https://github-readme-stats.vercel.app/api?username=amits44&show_icons=true&theme=radical)
-
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=amits44&layout=compact&theme=radical)
 
 ---
