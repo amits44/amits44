@@ -1,121 +1,54 @@
-# Hi there, I'm Amit Jyala 
+# Amit Jyala
 
-### AI/ML Engineer | Building Intelligent Systems with LangChain & Multi-Agent Architectures
+AI & Data Science graduate (2026). I build AI systems and backend pipelines that work reliably in production, not just in demos.
 
-I'm passionate about developing practical AI solutions that bridge the gap between cutting-edge research and real-world applications. My work focuses on **Retrieval-Augmented Generation (RAG)**, **multi-agent systems**, and **intelligent assistants**.
-
----
-
-##  Featured Projects
-
-###  [C-RAG Research Assistant](https://github.com/amits44/crag-assistant)
-A **Corrective Retrieval-Augmented Generation** system that intelligently answers research questions with web search fallback for enhanced accuracy.
-
-**Key Features:**
--  Multi-format document support (PDF, TXT, MD, CSV)
--  Intelligent retrieval with relevance grading
--  Automatic web fallback when local documents are insufficient
--  Hallucination detection and self-correction
--  Source tracking and quality validation
-
-**Tech Stack:** `LangChain` `LangGraph` `ChromaDB` `Streamlit` `Groq` `Tavily`
+Currently focused on LLM-powered systems, RAG architectures, and multi-agent orchestration using LangGraph.
 
 ---
 
-### 🤖 [AI Desktop Assistant (Jarvis)](https://github.com/amits44/AI-desktop-assistant)
-Voice-powered desktop assistant leveraging Google Gemini's generative AI for real-time voice command processing.
+## Projects
 
-**Capabilities:**
--  Voice recognition and natural language understanding
--  Context-aware conversations powered by Gemini AI
--  Desktop automation (opening apps, websites, taking screenshots)
--  Music playback and web search integration
--  Text-to-speech responses
+### [retrieval-engine](https://github.com/amits44/retrieval-engine)
 
-**Tech Stack:** `Python` `Google Gemini API` `SpeechRecognition` `Pyttsx3` `PyAutoGUI`
+A Corrective RAG pipeline that scores retrieved document quality before passing context to the model. If the score is too low, it routes to a live web search fallback via Tavily instead of hallucinating from weak context.
+
+Built by reading the original CRAG paper and LangGraph/ChromaDB docs directly — no tutorial. Full pipeline observability via LangSmith. Iterated through three retrieval strategies (dense, hybrid, reranking) and picked based on measured precision.
+
+**Stack:** Python · LangGraph · ChromaDB · FastAPI · Groq (Llama 3.3 70B) · Tavily · LangSmith · Hugging Face
 
 ---
 
-###  [Multi-Agent Support System](https://github.com/amits44/multi-agent-support)
-Enterprise-grade multi-agent customer support system with specialized agents working collaboratively.
+### [retinal-detect](https://github.com/amits44/retinal-detect)
 
-**Architecture:**
--  Coordinated agent workflows using LangGraph
--  Knowledge base integration for accurate responses
--  Agent handoff and task delegation
--  Scalable support automation
+End-to-end medical AI system for detecting retinal diseases from OCT scans. Trained on 1,000+ scans, ~90% accuracy across 4 disease classes. Built with a confidence gating layer (>85% threshold) so unreliable predictions don't reach the output. REST API decoupled from the model layer — model is swappable without touching the contract.
 
-**Tech Stack:** `LangChain` `LangGraph` `Python`
+Built solo in 6 weeks from data preprocessing to deployment.
+
+**Stack:** Python · TensorFlow · Node.js · REST APIs · PostgreSQL
 
 ---
 
-###  [LuminaPath - AI-Powered Retinal Disease Detection](https://github.com/amits44/LuminaPath---AI-Powered-Retinal-Disease-Detection)
-Deep learning system for automated retinal disease detection from fundus images.
+### [trend-to-video](https://github.com/amits44/Content-factory) *(in progress)*
 
-**Tech Stack:** `Python` `TensorFlow/PyTorch` `Computer Vision`
+Multi-agent pipeline that goes from trending topic to published short-form video. Separate LangGraph agents handle trend research (SerpAPI), script generation, voiceover (gTTS), and cross-platform publishing to YouTube and Instagram. Each agent produces structured output the next one consumes — no brittle glue code between steps.
 
----
+The interesting problem: designing handoff contracts between agents so the pipeline is testable at each stage independently.
 
-###  [LeetCode Assistance](https://github.com/amits44/Leetcode-Assistance)
-Intelligent coding assistant for LeetCode problem-solving.
-
-**Tech Stack:** `JavaScript`
+**Stack:** Python · LangGraph · FastAPI · SerpAPI · gTTS · Groq
 
 ---
 
-##  Technical Skills
+## Skills
 
-### Languages
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-
-### AI/ML Frameworks
-![LangChain](https://img.shields.io/badge/LangChain-00A67E?style=for-the-badge)
-![LangGraph](https://img.shields.io/badge/LangGraph-FF6B6B?style=for-the-badge)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-
-### LLM & AI Tools
-- **LLM Providers:** Groq, OpenAI, Google Gemini
-- **Vector Databases:** ChromaDB, Pinecone
-- **RAG Techniques:** CRAG, Adaptive RAG, Self-RAG
-- **Agent Frameworks:** LangGraph, CrewAI
-
-### Development Tools
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+**Languages:** Python, JavaScript  
+**AI / ML:** LangGraph, LangSmith, Hugging Face, ChromaDB, TensorFlow, Scikit-learn, RAG, CRAG, LLMs, Prompt Engineering  
+**Backend:** FastAPI, Node.js, Express, REST APIs, Docker  
+**Databases:** PostgreSQL, MongoDB, ChromaDB, SQL  
+**Frontend:** React, Tailwind CSS, Streamlit  
+**Tools:** Git, pytest, LangSmith  
 
 ---
 
-##  Areas of Expertise
+## Contact
 
-- ** RAG Systems**: Building production-ready retrieval-augmented generation pipelines
-- ** Multi-Agent Systems**: Orchestrating collaborative AI agents with LangGraph
-- ** Voice AI**: Speech recognition and synthesis for conversational interfaces
-- ** Vector Search**: Semantic search with embeddings and vector databases
-- ** LLM Validation**: Hallucination detection and answer grading
-- ** Web Integration**: API orchestration and web scraping for AI applications
-
----
-
-##  What I'm Currently Working On
-
--  Exploring advanced RAG architectures (Agentic RAG, GraphRAG)
--  Building multi-agent collaboration frameworks
--  Contributing to open-source AI projects
--  Experimenting with the latest LLM models and techniques
-
----
-
-##  Let's Connect!
-
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:amitsingjyala@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/amits44)
-
----
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=amits44&layout=compact&theme=radical)
-
----
-
-⭐ **Feel free to explore my repositories and reach out if you'd like to collaborate on AI/ML projects!**
+amitsingjyala@gmail.com | github.com/amits44
