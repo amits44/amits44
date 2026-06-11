@@ -22,8 +22,6 @@ Built by reading the original CRAG paper and LangGraph/ChromaDB docs directly �
 
 End-to-end medical AI system for detecting retinal diseases from OCT scans. Trained on 1,000+ scans, ~90% accuracy across 4 disease classes. Built with a confidence gating layer (>85% threshold) so unreliable predictions don't reach the output. REST API decoupled from the model layer — model is swappable without touching the contract.
 
-Built solo in 6 weeks from data preprocessing to deployment.
-
 **Stack:** Python · TensorFlow · Node.js · REST APIs · PostgreSQL
 
 ---
