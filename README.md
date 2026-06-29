@@ -26,7 +26,7 @@ End-to-end medical AI system for detecting retinal diseases from OCT scans. Trai
 
 ---
 
-### [trend-to-video](https://github.com/amits44/Content-factory) *(in progress)*
+### [trend-to-video](https://github.com/amits44/Content-factory) 
 
 Multi-agent pipeline that goes from trending topic to published short-form video. Separate LangGraph agents handle trend research (SerpAPI), script generation, voiceover (gTTS), and cross-platform publishing to YouTube and Instagram. Each agent produces structured output the next one consumes, no brittle glue code between steps.
 
